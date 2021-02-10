@@ -1,0 +1,93 @@
+package lab01;
+
+/**
+ * A class representing a loan
+ */
+public class Loan {
+    private double amount; // amount the loan is for
+    private double interestRate; // rate the loan takes on interest
+
+    /**
+     * Construct a loan object given a loan amount
+     * and an interest rate
+     *
+     * @param amt the amount of the loan
+     * @param ir the interest rate
+     */
+    public Loan(double amt, double ir) {
+        this.amount = amt;
+        this.interestRate = ir;
+    }
+
+    /**
+     * Gets the amount the loan is for
+     *
+     * @return the amount of the loan
+     */
+    public double getAmount() {
+        return amount;
+    }
+
+    /**
+     * Gets the interest rate of the loan
+     *
+     * @return the interest rate of the loan
+     */
+    public double getInterestRate() {
+        return interestRate;
+    }
+
+    /**
+     * Return the amount to be paid back on the loan,
+     * given a number of years that have passed
+     *
+     * @param years the amount of years that have passed
+     * @return the amount due on the loan after `years` years have passed
+     */
+    public double getAmountDue(int years) {
+        double amt = amount;
+        for (int i = 0; i < years; i++) {
+            amt += amt * interestRate;
+        }
+        return amt;
+    }
+}
+    /**
+     * Construct a loanee object given an amount of money (in dollars)
+     * @param money the amount of dollars the person has
+     */
+    public Loanee(int money) {
+        this.money = money;
+    }
+
+    /**
+     * Gets the money the Loanee has
+     * @return the money the Loanee has
+     */
+    // TODO fill in the blanks, use the Loan class as a guide
+    public _?_ getMoney() {
+        return _?_;
+    }
+
+    /**
+     * Determines if this person could pay back a potential loan
+     * given back an amount, an interest rate, and how many years
+     * it will take for them to pay it all back at once
+     *
+     * @param amt the amount the loan is for
+     * @param ir the interest rate of the loan
+     * @param years the number of years to go by before they can
+     * pay the loan
+     * @return true if the Loanee can pay back the loan, false if
+     * they cannot
+     */
+    public boolean canPayLoan(double amt, double ir, int years) {
+        // TODO
+        /*
+         HINTS:
+         Create a loan object with an amount and an interest rate
+         Find the cost of that loan after a number of years
+         Check if the person has enough money to pay back the loan
+        */
+    }
+}

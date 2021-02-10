@@ -1,0 +1,118 @@
+Baptiste Saliba
+CS471 Assignment 1
+
+Problem 1.
+
+    #include <stdio.h>
+    char 9a, b2; // error 1
+    INT ar[10];  // error 2
+    long fr; nx; // error 3 
+    int * p;
+    
+    int main (void){
+          int auto ;  // error 4
+          int x;
+          ar[1] = x;
+          *p = 10;
+          suto = chg(x); // error 5
+          return auto; // error 6
+    }
+    int chg(long  fr)  {
+         if (fr = 0) {  // error 7
+              x = 10; // error 8
+              ar[10] = 10; // error 9
+            } else {
+                 ar[1] = 1;
+            }
+        return ar[1];
+    }
+    
+    
+    1. Lexical Error: Started a variable name with a number rather than a letter which would be an invalid token 
+    2. Static Semantic Error: This is an error that occurs when doing type checking. These types of errors are caught by the semantic analyzer
+    3. Static Semantic Error: This again is a type error because the type is not specified
+    4. Static Semantic Error: In this case our variable is missing a name (identifier). This is semantic because it is not a question of wellformedness but rather an issue with the meaning of the code
+    5. Static Semantic Error: This is an error b/c the programmer didn't declare suto prior to the assignment, which is an issue with what that line of code means rather than wellformedness
+    6. Syntax Error: This is an error b/c after return we expect an expression which is a question of structure rather than meaning.
+    7. Logic Error: Technically this line is valid however it is almost definitely not what the programmer intended. They probably intended fr == 0. This if statement will always evaluate to false.
+    8. Static Semantic Error: This is the same type of error as 5
+    9. Dynamic Semantic Error: This is an array out of bounds error. This will be caught at runtime and thus is a dynamic semantic error
+
+Problem 2.
+
+    Source:
+    /* Use to generate assembly file */
+    int powI(int pow, int base) {
+      int acc, p;
+      for (acc=1,p=0; p < pow; p++) {
+        acc = acc * base;
+      }
+      return acc;
+    }
+    
+    Assembly:
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset %rbp, -16 <-- allocate space on stack
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register %rbp
+	movl	%edi, -4(%rbp) <-- pow
+	movl	%esi, -8(%rbp) <-- base
+	movl	$1, -12(%rbp) <-- acc
+	movl	$0, -16(%rbp) <-- p
+	movl	-16(%rbp), %eax <-- move value of p into eax
+	cmpl	-4(%rbp), %eax <-- cmp to see if p < pow
+	jge	LBB0_4
+	movl	-12(%rbp), %eax <-- move value of acc into eax
+	imull	-8(%rbp), %eax <-- acc = acc * base
+	movl	%eax, -12(%rbp) <-- move acc back onto stack
+	movl	-16(%rbp), %eax <-- move value of p into eax
+	addl	$1, %eax <-- p++
+	movl	%eax, -16(%rbp) <-- move p back onto stack
+	jmp	LBB0_1
+	movl	-12(%rbp), %eax <-- move acc into eax to be returned
+	popq	%rbp <-- return acc
+	retq
+
+Problem 3.
+
+    1.
+    int powF(int pow, int base) {
+        if (pow <= 0){
+            return 1;
+        }else{
+            return base*powF(pow-1, base);
+        }
+    }
+
+    2. powI() = O(n) and powF = O(n) as well
+    3. Both approaches have the same time complexity in this case so neither is more efficient than the other. I believe the functional approach is far more readable so if you are looking for clarity, I would argue that the functional approach is better. The iterative approach would be useful if you wanted to hold onto each individual power of the base, for example: 
+
+    int powI(int pow, int base) {
+      int[pow] powers;
+      int acc, p;
+      for (acc=1,p=0; p < pow; p++) {
+        acc = acc * base;
+        powers[p] = acc
+      }
+      return acc;
+    }
+
+Problem 4.
+   Code can be found in pow_full.py 
+
+Problem 5.
+   The use of a feature, for which this International Standard imposes no requirements 
+
+Problem 6.
+    Undefined behaviour is behaviour which the International Standard doesn't give any possible outcomes for, whereas unspecified behaviour is behaviour that the International Standard gives two or more possible outcomes but doesn't specify which will happen 
+
+Problem 7.
+    1. Lexical - `int b$b = 1`
+    2. Syntax - `int a = 1 int b = 2`
+    3. Static Semantic - `int a = "ABC";`
+    4. Dynamic Semantic - `int[10] a; a[10] = 15;``
+    5. Uncatchable - `if(false){ x=10;}`
+
+Problem 8.
+    Syntax is the arrangment of words and tokens to make well formed code. Semantics is the meaning of that arrangement. Code can be syntactically correct yet still not have proper semantics. So syntax, is concerned with form and structure, whereas semantics is concerned with meaning.

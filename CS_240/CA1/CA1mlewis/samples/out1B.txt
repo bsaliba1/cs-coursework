@@ -1,0 +1,225 @@
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+Invalid input 
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+Invalid input 
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+Invalid input 
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+Invalid input 
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+Invalid input 
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+Invalid input 
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+Invalid input 
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+Invalid input 
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+
+Please enter the amount you would like to donate:  
+Inputted command has been executed. What would you like to do next?? 
+
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+
+ $1000
+Inputted command has been executed. What would you like to do next?? 
+
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+
+Please enter the amount you would like to donate:  
+Inputted command has been executed. What would you like to do next?? 
+
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+
+Please enter the amount you would like to donate:  
+Inputted command has been executed. What would you like to do next?? 
+
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+
+Please enter the amount you would like to donate:  
+Inputted command has been executed. What would you like to do next?? 
+
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+
+ $1234.56
+Inputted command has been executed. What would you like to do next?? 
+
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+
+Your last name is: 
+Your first name is: 
+Your age is: 0
+Your street number is: 0
+Your street name is:  
+Your town's name is: 
+Your zipcode is: 
+Your current balance to date is: 1234.56
+
+Inputted command has been executed. What would you like to do next?? 
+
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+
+Please enter your last name:  
+Please enter your first name:  
+Please enter your age:  
+Please enter your street number:  
+Please enter your street name:  
+Please enter your town's name:  
+Please enter your zip code:  
+Inputted command has been executed. What would you like to do next?? 
+
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+
+Your last name is: Rodriquez
+Your first name is: Juan
+Your age is: 21
+Your street number is: 55
+Your street name is:  Pine
+Your town's name is: Vestal
+Your zipcode is: 13850
+Your current balance to date is: 0.00
+
+Inputted command has been executed. What would you like to do next?? 
+
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+
+Rodriquez $0.00
+Inputted command has been executed. What would you like to do next?? 
+
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+
+Please enter the amount you would like to donate:  
+Inputted command has been executed. What would you like to do next?? 
+
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 
+
+Rodriquez $5.00
+Inputted command has been executed. What would you like to do next?? 
+
+Please type one of the following commands depending on what you'd like to do: 
+- 'New': Zero out all passed values 
+- 'Update': Update user information 
+- 'View': Display all user information 
+- 'Donate': Donate to the campaign 
+- 'Report': Display last name and current donation balance 
+- 'Quit': Exit program 

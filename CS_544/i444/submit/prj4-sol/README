@@ -1,0 +1,9 @@
+Name:	    Baptiste Saliba	
+B-Number:	B00599094
+Email:		bsaliba1@binghamton.edu
+
+Running the program:
+    $ node ./index.js 2346 http://zdu.binghamton.edu:2345
+     or
+    $ ./start_server
+

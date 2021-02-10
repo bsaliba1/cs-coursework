@@ -1,0 +1,12 @@
+Baptiste Saliba
+HW1
+
+Problem 1.
+    a) d_prop = m/s
+    b) d_trans = L/R
+    c) d_nodal = d_prop + d_trans = m/s + L/R
+    d) The last bit will have just have started to propogate to host B. It will just have been transmitted onto the wire.
+    e) The first bit will be on the wire being sent to host B but will not have arrived yet
+    f) The first bit will have already arrived at host B.
+    g) m = (0.12*(2.5*10^8))/56 = 535714m
+

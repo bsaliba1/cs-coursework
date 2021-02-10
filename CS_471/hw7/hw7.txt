@@ -1,0 +1,165 @@
+Teammates: Danika Gaviola, Baptiste Saliba, Troy Ballinger
+
+Question1. 
+
+a)
+Page 124 CYU( check your understand) #4
+Explain the distinction between the lifetime of a name-to-object binding and its visibility.
+If the object is stack allocated then the lifetime of the variable is from when it is declared to once it exits the function in which it is declared. The object is visible from within the enclosing function. If the object is static then the lifetime is the duration of the program, and it is visible from within the enclosing function.
+
+b)
+page 135 CYU #12
+What do we mean by the scope of a name-to-object binding?
+The scope is the region within the code in which the object is active and referenceable.
+
+c)
+page 167 exercise 3.4.
+Give three concrete examples drawn from programming languages with which you are familiar in which a variable is live but not in scope.
+
+----------------------
+//example 1:
+
+int foo(){
+	cout << x << endl; //ERROR: x is not in scope, but it is still live within main.
+}
+int main(){
+	int x = 4;
+	foo();
+	return 0;
+}
+----------------------
+//example 2:
+
+void foo(){
+	static int a = 1;
+		printf(“%d\n”, a); //prints ‘1’
+}
+int main(){
+    foo();
+    printf(“%d\n”, a) //error: variable is not in scope yet ‘a’ is alive until the program terminates
+}
+----------------------
+//example 3:
+
+void makeArray(void) {
+	int array[] = new int[10]; 
+// Allocated on heap but no references exist to it outside of local scope
+	return;
+}
+int main(void) {
+	makeArray();
+	cout << array[0]; // Fail, out of scope
+	return 0;
+}
+----------------------
+
+
+Question 2.
+
+Consider the following pseudo code:
+
+
+   x : integer := 9
+   y : integer := 20
+   procedure add()
+     	x := x + y
+   procedure second(P : procedure)
+     	x : integer := 3
+     	P()
+   procedure first()
+     	y : integer := 2
+     	second(add)
+
+   first()
+   write integer(x)
+
+
+What does this program print if the language uses static scoping?
+
+29
+
+Explain why 11 is printed out if the language uses dynamic scoping with deep binding.
+
+Dynamic scoping with deep binding binds the environment at the time the procedure is passed as an argument. So at that time, x is still 9, but y has been changed to 2. Therefore, when they are added together, the result is 11. 
+
+Explain why 9 is printed out if the language uses dynamic scoping with shallow binding.
+
+For shallow binding, the procedure “write integer” references the global x. So, since the global variable x is set to 9, it will pull that number and print it out. The global x was not modified by the ‘second’ function which is why when we call write integer(x) we get the value 9.
+
+
+
+Question 3.
+
+Page 768 exercise 14.11. This problem includes a snippet of Perl code. Please use this code instead of the code printed in the book: (Perl program).
+Your answer should include both modified Perl code and speculation about nested named subroutines, as indicated in the book.
+sub foo {
+	my $lex = $_[0];
+	sub bar { 
+  		print "$lex\n";
+		$lex = 5;
+	};
+	print "Call to foo ";
+	print "$lex\n";
+	bar();
+foo(2); foo(3);
+
+Output:
+Call to foo 2
+2
+Call to foo 3
+5
+
+Answer) When ‘foo’ is called for the first time, ‘lex’ will reference the value in the outer subroutine ‘foo’ rather than the value within ‘bar’ because the inner subroutine shares the value of lex with the outer subroutine. However, after the first call to the subroutine ‘foo’ the value of ‘lex’ for the inner subroutine ‘bar’ is assigned to 5, so the value for ‘lex’ is no longer shared for the inner and outer subroutines. For all calls to ‘foo’ after the first call, no matter what param you feed into the function ‘foo’ it will always print out 5. We can now speculate that nested subroutines maintain their scope through subsequent function calls. 
+
+You can fix this by making the ‘bar’ function an anonymous function:
+
+sub foo {
+	my $lex = $_[0];
+	my $bar = (sub{
+  		print "$lex\n";
+		$lex = 5;
+	});
+	print "Call to foo ";
+	print "$lex\n";
+	$bar->();
+}
+foo(2); // output: Call to foo 2 \n 2
+foo(3); // output: Call to foo 3 \n 5
+
+
+
+Question 4.
+
+OMITTED
+
+
+
+Question 5.
+
+pg. 286 exercise 6.1: We noted in Section 6.1.1 that most binary arithmetic operators are left associative in most programming languages. In Section 6.1.4, however, we also noted that most compilers are free to evaluate the operands of a binary operator in either order. Are these statements contradictory? Why or why not?
+
+No, because associativity is necessary to disambiguate the order of arguments for an operator. It is up to the compiler to determine how to evaluate expressions, while its the job of the language to determine precedence. 
+
+
+
+Question 6.
+
+pg. 287 exercise 6.7: Is &(&i) ever valid in C? Explain.
+No, because (&i) returns an rvalue, i.e. data stored in memory. The & operator requires an lvalue as a parameter because it returns the address of the object in memory -- an rvalue is not addressable. For example, &25 will fail for the same reason.
+
+
+
+Question 7.
+
+pg. 287 exercise 6.9 (Be concise.): In Section 6.1.2 (“Orthogonality”), we noted that C uses = for assignment and == for equality testing. The language designers state: “Since assignment is about twice as frequent as equality testing in typical C programs, it’s appropriate that the operator be half as long” [KR88, p. 17]. What do you think of this rationale?
+
+I agree with this rationale, as = is used far more than ==. Also, it follows the convention of the other comparators (>=, <=, !=, etc.).
+
+
+
+Question 8.
+
+pg; 245 CYU 14.  What is the advantage of the definite assignment feature in a programming language?  What is the disadvantage?
+
+Advantage: ensures that variables are always assigned before they are used in an expression, catches errors upon compilation.
+Disadvantage: Sometimes falsely prohibit programs that never use an unassigned variable.

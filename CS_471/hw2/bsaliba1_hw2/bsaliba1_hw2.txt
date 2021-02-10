@@ -1,0 +1,196 @@
+Baptiste Saliba
+CS 471 Assignment 2
+
+Problem 1.
+
+    a)
+        <command> ::= <factor>
+        <factor> ::= (<factor>) | <term>
+        <term> ::= <expr> * <term> | <expr>
+        <expr> ::= <number> + <expr> | <number>
+        <number> ::= 10 * (<number>) + <digit> | <digit>
+        <digit> ::= 0|1|2|3|4|5|6|7|8|9
+
+    b)
+        This grammar is right recursive making addition and multiplication right associative.
+
+Problem 2.
+
+    <command> ::= <factor>
+    <factor> ::= (<factor>) | <power> 
+    <power> ::= <term> ^ <power> | <power>
+    <term> ::= <minus> * <term> | <minus>
+    <minus> ::= <expr> - <minus> | <expr>
+    <expr> ::= <number> + <expr> | <number>
+    <number> ::= 10 * (<number>) + <digit> | <digit>
+    <digit> ::= 0|1|2|3|4|5|6|7|8|9
+    
+Problem 3.
+
+    a)
+        <command>
+        <fact>
+        <power>
+        <term>
+        <minus>
+        <expr> - <minus>
+        <number> + <expr> - <minus>
+        1 + <expr> - <minus>
+        1 + <number> - <minus>
+        1 + 2 - <minus>
+        1 + 2 - <expr>
+        1 + 2 - <number>
+        1 + 2 - 2
+
+    b)
+        <command>
+        <fact>
+        <power>
+        <term>
+        <minus> * <term>
+        <expr> - <minus> * <term>
+        <number> + <expr> - <minus> * <term>
+        1 + <expr> - <minus> * <term>
+        1 + <number> - <minus> * <term>
+        1 + 2 - <minus> * <term>
+        1 + 2 - <expr> * <term>
+        1 + 2 - <number> * <term>
+        1 + 2 - 3 * <term>
+        1 + 2 - 3 * <minus>
+        1 + 2 - 3 * <expr>
+        1 + 2 - 3 * <number>
+        1 + 2 - 3 * 5
+
+    c)
+        <command>
+        <fact>
+        <power>
+        <term> ^ <power>
+        <minus> ^ <power>
+        <expr> ^ <power>
+        <number> ^ <power>
+        2 ^ <power>
+        2 ^ <term> ^ <power>
+        2 ^ <minus> ^ <power>
+        2 ^ <expr> ^ <power>
+        2 ^ <number> ^ <power>
+        2 ^ 5 ^ <power>
+        2 ^ 5 ^ <term>
+        2 ^ 5 ^ <minus>
+        2 ^ 5 ^ <expr>
+        2 ^ 5 ^ <number>
+        2 ^ 5 ^ 2
+
+Problem 4.
+    Code can be found in file arith1_prob4.c and can be compiled with command `make prob4`
+
+Problem 5.
+    a)
+        <command> ::= <factor>
+        <factor> ::= (<factor>) | <term>
+        <term> ::= <factor> * <expr> | <expr>
+        <expr> ::= <term> + <number> | <number>
+        <number> ::= 10 * (<number>) + <digit> | <digit>
+        <digit> ::= 0|1|2|3|4|5|6|7|8|9
+
+    b)
+        This grammar is left recursive making addition and multiplication left associative.
+
+Problem 6.
+    <command> ::= <factor>
+    <factor> ::= (<factor>) | <power> 
+    <power> ::= <factor> ^ <term> | <power>
+    <term> ::= <power> * <minus> | <minus>
+    <minus> ::= <term> - <expr> | <expr>
+    <expr> ::= <minus> + <number> | <number>
+    <number> ::= 10 * (<number>) + <digit> | <digit>
+    <digit> ::= 0|1|2|3|4|5|6|7|8|9
+
+Problem 7.
+    a)
+        <command>
+        <fact>
+        <power>
+        <term>
+        <minus>
+        <term> - <expr>
+        <minus> - <expr>
+        <expr> - <expr>
+        <minus> + <number> - <expr>
+        <expr> + <number> - <expr>
+        <number> + <number> - <expr>
+        1 + <number> - <expr>
+        1 + 2 - <expr>
+        1 + 2 - <number>
+        1 + 2 - 2
+
+     b)
+       <command>
+       <fact>
+       <power>
+       <term>
+       <power> * <minus>
+       <term> * <minus>
+       <minus> * <minus>
+       <term> - <expr> * <minus>
+       <minus> - <expr> * <minus>
+       <expr> - <expr> * <minus>
+       <minus> + <number> - <expr> * <minus>
+       <expr> + <number> - <expr> * <minus>
+       <number> + <number> - <expr> * <minus>
+       1 + <number> - <expr> * <minus>
+       1 + 2 - <expr> * <minus>
+       1 + 2 - <number> * <minus>
+       1 + 2 - 3 * <minus>
+       1 + 2 - 3 * <expr>
+       1 + 2 - 3 * <number>
+       1 + 2 - 3 * 5
+
+    c)
+        <command>
+        <fact>
+        <power>
+        <fact> ^ <term>
+        <power> ^ <term>
+        <fact> ^ <term> ^ <term>
+        <term> ^ <term> ^ <term>
+        <minus> ^ <term> ^ <term>
+        <expr> ^ <term> ^ <term>
+        <number> ^ <term> ^ <term>
+        2 ^ <term> ^ <term>
+        2 ^ <minus> ^ <term>
+        2 ^ <expr> ^ <term>
+        2 ^ <number> ^ <term>
+        2 ^ 5 ^ <term>
+        2 ^ 5 ^ <minus>
+        2 ^ 5 ^ <expr>        
+        2 ^ 5 ^ <number>        
+        2 ^ 5 ^ 2
+
+Problem 8.
+    Code in file arith2_prob8.c and can be compiled with the command `make prob8`
+        
+Problem 9.
+    a) _Bool and bool both serve the same purpose, of representing a 1 or a 0.
+    b) _Bool is an official part of the languge and if you want to use it you simply need to do something like this `_Bool x = 1`. However, many progammers are used to using bools in ways such as this `bool x = true`. So in order to accomodate for these programmers, the C99 standard offers the header file stdbool.h which aliases _Bool to bool and allows for the use of bool, true, and false.
+    c) Neither is truly better than the other seeing as they are essentially the same exact thing just packaged differently in order to accomodate for different programming styles.
+
+Problem 10.
+    What are pragmas? Why are they processed by the scanner?  Briefly, if you are a language designer what are the trade offs of providing pragmas in a language?
+    Pragmas are constructs withing certain langauges that provide directives or hints to the compiler. They are processed by the scanner because these directives change the compilation process and so must be applied prior to compilation. Seeing as the scanner runs prior to the compiler it makes the most sense for the scanner to process this information. In effect pragmas allow for more efficient compilation but at the cost of greatly complicating the role of the scanner.
+    
+ Problem 11. 
+    a) -^w^xyz
+    b) -w^x^yz
+    c) -**wxyz
+    d) ++w*xyz
+ 
+ Problem 12.
+   a) wxy^^z-
+   b) wxyz^^-
+   c) wx*y*z-
+   d) wxy*+z+ 
+
+Problem 13.
+    a) 2
+    b) 7

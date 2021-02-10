@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Search Sensors</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="page">
+    <h1 class="tst-sensors-search-page">Search Sensors</h1>
+    <form method="GET">
+      <label for="id">
+        Sensor ID
+      </label>
+      <div>
+        <input name="id" type="text" value="" id="id" class="tst-sensor-id">
+
+      </div>
+      <label for="model">
+        Model
+      </label>
+      <div>
+        <input name="model" type="text" value="" id="model" class="tst-model">
+
+      </div>
+      <label for="period">
+        Period
+      </label>
+      <div>
+        <input name="period" type="text" value="" id="period" class="tst-period numeric">
+
+      </div>
+      <label>&nbsp;</label><input type="submit" value="search">
+    </form>
+  </div>
+  <h2>Results Summary</h2>
+
+  <table class="summary">
+    <thead>
+      <tr>
+        <th>Sensor ID</th>
+        <th>Model</th>
+        <th>Period</th>
+        <th colspan="2">Expected Range</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>Min</th>
+        <th>Max</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tst-sensor-id">
+          233y
+        </td>
+        <td class="tst-model">
+          ge-t37c
+        </td>
+        <td class="tst-period numeric">
+          93
+        </td>
+        <td class="numeric interval tst-expected-min">
+          190
+        </td>
+        <td class="numeric interval tst-expected-max">
+          755
+        </td>
+      </tr>
+      <tr>
+        <td class="tst-sensor-id">
+          234k
+        </td>
+        <td class="tst-model">
+          ge-p92b
+        </td>
+        <td class="tst-period numeric">
+          5
+        </td>
+        <td class="numeric interval tst-expected-min">
+          20
+        </td>
+        <td class="numeric interval tst-expected-max">
+          159
+        </td>
+      </tr>
+      <tr>
+        <td class="tst-sensor-id">
+          2356
+        </td>
+        <td class="tst-model">
+          ge-h47a
+        </td>
+        <td class="tst-period numeric">
+          23
+        </td>
+        <td class="numeric interval tst-expected-min">
+          23
+        </td>
+        <td class="numeric interval tst-expected-max">
+          102
+        </td>
+      </tr>
+      <tr>
+        <td class="tst-sensor-id">
+          235s
+        </td>
+        <td class="tst-model">
+          ge-f26x
+        </td>
+        <td class="tst-period numeric">
+          77
+        </td>
+        <td class="numeric interval tst-expected-min">
+          29
+        </td>
+        <td class="numeric interval tst-expected-max">
+          134
+        </td>
+      </tr>
+      <tr>
+        <td class="tst-sensor-id">
+          236e
+        </td>
+        <td class="tst-model">
+          hw-t42k
+        </td>
+        <td class="tst-period numeric">
+          77
+        </td>
+        <td class="numeric interval tst-expected-min">
+          -10
+        </td>
+        <td class="numeric interval tst-expected-max">
+          131
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="scroll">
+    <a class="tst-next" href="?_index&#x3D;5" rel="next">&gt;&gt;</a>
+  </div>
+
+  <footer>
+    <ul>
+      <li><a class="tst-home" href="/">Home</a>.</li>
+      <li>
+        <a class="tst-sensor-types-search" href="/sensor-types.html">
+          Search Sensor Types
+        </a>.
+      </li>
+      <li>
+        <a class="tst-sensor-types-add" href="/sensor-types/add.html">
+          Add Sensor Type
+        </a>.
+      </li>
+      <li>
+        <a class="tst-sensors-search" href="/sensors.html">
+          Search Sensor
+        </a>.
+      </li>
+      <li>
+        <a class="tst-sensors-add" href="/sensors/add.html">
+          Add Sensor
+        </a>.
+      </li>
+    </ul>
+  </footer>
+</body>
+
+</html>

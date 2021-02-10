@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bsaliba1/Documents/CS/CS_540/final-bsaliba1/type_handler/type_handler.cpp
+typeindex
+-
+map
+-
+iostream
+-
+memory
+-
+typeinfo
+-
+

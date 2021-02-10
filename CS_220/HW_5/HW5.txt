@@ -1,0 +1,34 @@
+CS-220 Spring 2018 Homework 5			Due: Mar. 18, 2018
+
+1. Given the C expression: float x=-19.625; 
+
+	A. What is the value for the sign bit of x?
+	    - 1
+	B. What is the binary representation of 19.625, using a binary point
+	   instead of a decimal point?
+	    - 10011.101
+	C. What is the representation of 19.625 in normalized binary scientific
+	   notation?
+	    - 1.0011101 *2^4 
+	D. What is the unbiased value of the exponent in the C representation?
+	    - 4
+	E. What is the biased value of the exponent in the C representation of
+	   19.625?
+	    - 131
+	F. What are the concrete fraction bits in the binary representation of x?
+	    - 00111010000000000000000  
+	G. What is the hexadecimal concrete representation of x?
+	    - 419d0000
+2. Given the following code:
+
+	union flint { 
+		float xf;
+		unsigned int xi;
+	} fl;
+	fl.xi=0x42c8000;
+	printf("xf=%.3f\n",fl.xf);
+	
+	What will get printed to standard output?
+	When I tried to run this, I got xf=0.000. However,I'm not sure if that's what you expected. I think what was expected was xf = 100.000 because when interpreting ox42c8000 as a float it would interpret it as 100.000.
+
+Turn in your edited HW5.txt file in myCourses under Homework Submissions, HW5.

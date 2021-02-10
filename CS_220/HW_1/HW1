@@ -1,0 +1,45 @@
+Last login: Tue Jan 23 14:55:33 on ttys001
+Baptistes-MacBook-Air:~ bsaliba1$ vim
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                w=y;
+                s_sum=x+y;
+                u_sum=v+w;
+                printf("Signed: %d + %d = %d\n",x,y,s_sum);
+                printf("Unsigned: %u + %u = %u\n",v,w,u_sum);
+                if (s_sum==u_sum) { printf("The result matches\n"); }
+                else { printf("The result is different\n"); }
+                return 0;
+        }       
+        
+   Then invoke the resulting program, specifying two numbers as command line
+   arguments.
+
+   Can you run this program with any arguments that ends up printing "The
+   results are different"?
+  
+  
+   Can you figure out why?
+        No there are no combinations of numbers that will result in a different
+        result. This is because s_sum and u_sum will always have the same value(        bitwise), the only difference is that s_sum is a signed integer and u_su        m is an unsigned integer and when comparing them with "==" it compares          the value in bits.
+

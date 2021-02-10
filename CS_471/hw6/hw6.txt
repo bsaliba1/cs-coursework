@@ -1,0 +1,57 @@
+Assignment 6.
+Teammates: Baptiste Saliba, Danika Gaviola, Troy Ballinger
+
+Question 1.
+Indicate the binding time (when the language is designed, when the program
+is linked, when the program begins execution, etc.) for each of the
+following decisions in your favorite programming language and implementation.
+Explain any answers you think are open to interpretation.
+
+The number of built-in functions (math, type queries, etc.):    
+    When the language is designed.
+b) The variable declaration that corresponds to a particular variable reference (use)
+    - Declarations are first seen at runtime and more specifically elaboration time
+c) The maximum length allowed for a constant (literal) character string:   
+    - Runtime, because string::max_size is not available as at compile-time and is system-dependant. 
+d) The referencing environment for a subroutine that is passed as a parameter
+    - The referencing environment refers to the complete set of bindings in effect at a certain point in a program. Those bindings occur at runtime
+e) The address of a particular library routine
+    - This happens at link time. For python linking happens at runtime but for compiled languages it happens after compilation.
+f) The total amount of space occupied by program code and data
+    - Load Time. This is the point where all code and data are loaded into memory prior to execution so the amount of space for program and data must be known
+
+Question 2. 
+
+    a) 
+
+    |------------------------------------|
+    | Return Address: %rsp               |
+    |------------------------------------|
+    | Control Link: %rbp                 |
+    |------------------------------------|
+    | Return Value: -4(%rbp)             |
+    |------------------------------------|
+    | Params: pow -8(%rbp)               |
+    |------------------------------------|
+    | Params: base -12(%rbp)             |
+    |------------------------------------|
+    | Return Address:%-20(rsp)           |
+    |------------------------------------|
+
+    b) The program stack grows down as it calls the function recursively
+
+    c) Annotations are in PowR1.s file
+
+3. The optimized version doesn’t touch the stack and all the operations are done with registers. It totally eliminates the recursion by setting the return value in %eax to 1, and then multiplying the value in the %eax register by the base (stored in %edi), pow times. 
+
+4. Best fit allows for less external fragmentation. Whereas first fit simply chooses the first block from the list of free blocks that is large enough to satisfy the request, best fit searches the entire list for the smallest(best) fit that satisfies the requirements. External fragmentation depends on the distribution of size requests, but one can select the better algorithm based on the distribution.
+
+5. First fit time complexity: O(n)
+A solution to reduce the time complexity is to sort the free blocks by size and separate them into different groups. That way, according to the size of the request, the algorithm can more quickly select the appropriate sized block and lower external fragmentation as well.
+
+6. 
+What is garbage? How is it created, and why is it a problem? Discuss the
+comparative advantages of reference counts and tracing collection as a means
+of solving the problem.
+
+There are two main strategies for garbage collection, reference counting and tracing. In terms of reference counting, a garbage object is one where no pointer to that object exists. In terms of tracing, a garbage object is one that is no longer accessible outside the heap. In general you can define a garbage object as one that we will never use again. Reference counts reduce overhead, as they only require a counter field in every object. However, reference counters are unable to handle circularity -- tracing is a more robust solution that temporarily stops the program and iterates through all references, purging unused memory and only keeping all “useful” memory allocated. However, this can quickly increase overhead, as reverse pointers are often used for bookkeeping. 

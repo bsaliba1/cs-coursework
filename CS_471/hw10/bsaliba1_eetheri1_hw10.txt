@@ -1,0 +1,89 @@
+Baptiste Saliba and Eddie Etheridge
+CS 471 Homework 10
+04/03/2020
+
+Question 1.
+
+Q: (Page 440 CYU 19) What is an r-value reference? Why might it be useful?
+
+A: Firstly, an r-value is an expression. So an r-value reference allows us to pass expressions as arguments by reference. R-value references are useful for situations like copy constructors where we don’t want to waste time and space creating a temporary object just for it to be destroyed. R-value references allow us to transfer the state of temporary objects.
+
+
+Question 2.
+
+Ref: Textbook page 430
+
+Q: (Page 461 CYU 36) What is the difference between a coroutine and a thread?
+
+A: Coroutines are a form of sequential processing. They hand control off between each other based on the programmer and the programming language. Threads are a form of concurrent processing because multiple threads can be running at once. Threads switch between each other based on the OS.
+
+
+Question 3.
+
+Ref: https://stackoverflow.com/questions/1934715/difference-between-a-coroutine-and-a-thread
+
+(A) 25 b/c the call to squaref will pass 5 in as the parameter for x, then in the body of the function we use 5 as x and get 5*5 which evaluates to 25.
+(B) 25 b/c the call to SQUARE(a) is replaced with a*a and since a's value is 5 we again get 5*5
+(C) squaref(2+2) will evaluate to 16 and SQUARE(2+2) will evaluate to 8. This is because 2+2 is evaluated prior to squaref's execution so in the body of squaref we use 4 as x so we return 4*4 which is 16. However, the SQUARE call is replaced with a*a where a is '2+2' so we get 2+2*2+2 which evaluates to 8.
+
+
+Question 4.
+
+(A)
+If pass by value is used, no values will change after being passed into the mys function. Therefore, runit() will print 1,2,1,0 then 1,2,1,0.
+
+(B)
+If pass by reference is used, x and y become aliases for the parameters that were passed in. Also, the mys function just swaps the values. In the first mys call, we swap i=1 with a[1]=1 so nothing changes. 1,2,1,0 is printed. Then, we called mys again with a[1] and a[1], but this time a[1] corresponds to both x and y so
+
+	a[1] = 1 + 1; // result:  a[i] =  2
+	a[1] = 2 - 2; // result: a[i] = 0
+	a[1] = 0 - 0; // result a[i] = 0
+
+So the second time around we print 1,2,0,0.
+
+(C)
+If copy in copy out is used, in the first call of mys x is a copy of i valued at 1 and y is a[i] also valued at 1.
+
+	X = 1 + 1; // result:  x =  2
+	Y = 2 - 1; // result: y = 1
+	X = 2 - 1; // result x = 1
+
+Now after this call the values for i and a[i] are overwritten by the values for x and y, so i = x = 1 and a[i] = y = 1. The first print is 1,2,1,0.
+
+For the second call x = a[1] = 1 and y = a[1] = 1.
+
+	X = 1 + 1 // result: x = 2
+	Y = 2 - 1 // result: y = 1
+	X = 2 - 1 //result: x = 1
+
+So after this second call the values of x and y both are copied to a[1] which will result in 1. The second print is 1,2,1,0
+
+
+(D)
+If macro expansion is used then we are doing textual substitution, so the first call
+Mys(i, a[i]) is replaced by:
+
+  // i = 1 and a[i] = a[1] = 1
+  i = i + a[i] // result: i = 2
+	// i = 2 and a[i]= a[2]= 0
+	a[i] = i - a[i] // result: a[2] = 2-0 = 2
+	// i = 2 and a[i] = a[2] = 2
+	i = i - a[i] //result: i = 2 - 2 = 0
+
+The first print is 0, 2, 1 ,2.
+
+The second call to mys is called with params a[1] and a[0]:
+
+
+	// a[1] = 1 and a[i] = a[0] = 2 
+    	a[1] = a[1] + a[i] // result: a[1] = 3
+	// a[1] = 3 and i = 0 and a[0]= 2
+	a[i] = a[1] - a[i] // a[0] = 1
+	// a[1] = 3 and a[i] = a[0] = 1
+	a[1] = a[1] - a[i] //result: a[1] = 2
+
+The second block just swaps the values of a[1] and a[0] so the result is 0,1,2,2
+
+
+(E)
+If we use pass by name the output will be the same as macro expansion because they both use textual substitution. There are differences between pass by name and macro expansion however, the differences don’t make any difference in this scenario. So the first print would be 0,2,1,2 and the second would print 0,1,2,2.

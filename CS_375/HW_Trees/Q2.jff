@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 6.4.--><structure>
+	<type>fa</type>
+	<automaton>
+		<!--The list of states.-->
+		<state id="0" name="$0,0">
+			<x>674.0</x>
+			<y>131.0</y>
+			<label>$94</label>
+		</state>
+		<state id="1" name="$10,5">
+			<x>555.0</x>
+			<y>238.0</y>
+			<label>$89</label>
+		</state>
+		<state id="2" name="$0,0">
+			<x>805.0</x>
+			<y>238.0</y>
+			<label>$94</label>
+		</state>
+		<state id="3" name="$40,7">
+			<x>481.0</x>
+			<y>329.0</y>
+			<label>$89</label>
+		</state>
+		<state id="4" name="$10, 5">
+			<x>613.0</x>
+			<y>327.0</y>
+			<label>$65</label>
+		</state>
+		<state id="5" name="$30,2">
+			<x>755.0</x>
+			<y>324.0</y>
+			<label>$94</label>
+		</state>
+		<state id="6" name="$0,0">
+			<x>873.0</x>
+			<y>328.0</y>
+			<label>$70</label>
+		</state>
+		<state id="7" name="$80,12">
+			<x>418.0</x>
+			<y>423.0</y>
+			<label>$89</label>
+		</state>
+		<state id="8" name="$40,7">
+			<x>525.0</x>
+			<y>431.0</y>
+			<label>$64</label>
+		</state>
+		<state id="9" name="$70,7">
+			<x>706.0</x>
+			<y>437.0</y>
+			<label>$94</label>
+		</state>
+		<state id="10" name="$30,2">
+			<x>803.0</x>
+			<y>434.0</y>
+			<label>$60</label>
+		</state>
+		<!--The list of transitions.-->
+		<transition>
+			<from>3</from>
+			<to>7</to>
+			<read>Include</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>Include</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>3</to>
+			<read>Include</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>5</to>
+			<read>Include</read>
+		</transition>
+		<transition>
+			<from>5</from>
+			<to>10</to>
+			<read>Don't</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>6</to>
+			<read>Don't</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>2</to>
+			<read>Don't</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>4</to>
+			<read>Don't</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>8</to>
+			<read>Dont</read>
+		</transition>
+		<transition>
+			<from>5</from>
+			<to>9</to>
+			<read>Include</read>
+		</transition>
+	</automaton>
+</structure>

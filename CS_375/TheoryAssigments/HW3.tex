@@ -1,0 +1,131 @@
+% XeLaTeX can use any Mac OS X font. See the setromanfont command below.
+% Input to XeLaTeX is full Unicode, so Unicode characters can be typed directly into the source.
+
+% The next lines tell TeXShop to typeset with xelatex, and to open and save the source with Unicode encoding.
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage{bm}
+\usepackage{amssymb}
+
+
+
+
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Mapping=tex-text]{Hoefler Text}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+\setmonofont[Scale=MatchLowercase]{Andale Mono}
+
+\title{CS 375 HW3}
+\author{Baptiste Saliba}
+
+\begin{document}
+\large
+\maketitle
+“I have done this assignment completely on my own. I have not copied it, nor have I given my solution to anyone else. I understand that if I am involved in plagiarism or cheating I will have to sign an official form that I have cheated and that this form will be stored in my official university record. I also understand that I will receive a grade of 0 for the involved assignment for my first offense and that I will receive a grade of “F” for the course for any additional offense.”\\
+\vspace{20mm}
+\vfill
+
+Question 1: \\
+\tab\tab $I1:10\$/lb$\tab$ I2: 7\$/lb $\tab $I3:6\$/lb$ \tab $I4: 8\$/lb$\\
+\tab\tab Total weight: 30\\\\
+\tab Order: I5 (25 pounds left), I4 (15 pounds left), I2 (0 pounds left)\\
+\tab $\$50 + \$80 + \$105 = \$235$\\\\\\
+
+Question 2:\\
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+ $ $ & $Y_i$ & $P(1)$ & $L(2)$ & $A(3)$ & $T(4)$ & $E(5)$\\
+\hline
+$X_i$ & $0$ & $0$ & $0$ &$0$&$0$&$0$\\
+\hline
+$A(1)$ & $0$ & $0(<)$ & $0(<)$ & $1(=)$ & $1(<)$ & $1(<)$\\
+\hline
+$P(2)$ & $\bm{0}$ & $1(=)$ & $1(<)$ & $1(<)$ & $1(<)$ & $1(<)$\\
+\hline
+$P(3)$ & $0$ & $\bm{1(=)}$ & $1(<)$ & $1(<)$ & $1(<)$ & $1(<)$\\
+\hline
+$L(4)$ & $0$ & $1(\wedge)$ & $\bm{2(=)}$ & $\bm{2(<)}$ & $\bm{2(<)}$ & $2(<)$\\
+\hline
+$E(5)$ & $0$ & $1(\wedge)$ & $2(\wedge)$ & $2(<)$ & $2(<)$ & $\bm{3(=)}$\\
+\hline
+\end{tabular}
+\end{center}
+
+\tab LCS: PLE \\
+\tab\tab Path: P->L->L->L->E\\\\\
+Question 3:\\\\
+\tab\tab DFS-Visit(G,U)\\
+\tab\tab\tab time = time+1;\\
+\tab\tab\tab u.d =time;\\
+\tab\tab\tab u.color = Gray;\\
+\tab\tab\tab for each v $\in$ G.Adj$[u]$\\
+\tab\tab\tab\tab if v.color == White\\
+\tab\tab\tab\tab\tab v.$\pi$ = u;\\
+\tab\tab\tab\tab\tab DFS-Visit(G,v);\\
+\tab\tab\tab\tab \textbf{if v.color == Gray\\
+\tab\tab\tab\tab\tab cycle = true}\\
+\tab\tab\tab v.color = black\\
+\tab\tab\tab time = time+1\\
+\tab\tab\tab u.f = time\\
+Note: 'cycle' is a global variable. If you visit a node that's grey it means it's already been visited and you can return to the current node from there so it's a cycle\\
+
+Question 4:\\
+\tab\tab \textbf{int count = $0$\\
+\tab\tab while(G.V $\neq \emptyset$)\\ 
+\tab\tab\tab S = G.V$[0]$\\
+\tab\tab\tab BFS(G,S)}\\
+\tab\tab BFS(G,S)\\
+\tab\tab\tab for each v $\in$ G.V - $\{s\}$\\
+\tab\tab\tab\tab v.color = White\\
+\tab\tab\tab\tab v.d = $\infty$\\
+\tab\tab\tab\tab v.$\pi$ = NIL\\
+\tab\tab\tab s.color = Gray\\
+\tab\tab\tab s.d = 0\\
+\tab\tab\tab Q = $\emptyset$\\
+\tab\tab\tab Enqueue(Q,S)\\
+\tab\tab\tab //This is checking if there are adjacent node. \\
+\tab\tab\tab //If there aren't then it's not a connected component \\
+\tab\tab\tab //so don't increment count\\
+\tab\tab\tab \textbf{if(adj$[s]$ $\neq$ $\emptyset$)\\
+\tab\tab\tab\tab count++}\\
+\tab\tab\tab while(Q $\neq \emptyset$)\\
+\tab\tab\tab\tab u = Dequeue(Q)\\
+\tab\tab\tab\tab for each v in adj$[u]$\\
+\tab\tab\tab\tab\tab if (v.color == White)\\
+\tab\tab\tab\tab\tab\tab v.color = Gray\\
+\tab\tab\tab\tab\tab\tab v.d = u.d+1\\
+\tab\tab\tab\tab\tab\tab v.$\pi$ = u\\
+\tab\tab\tab\tab\tab\tab Enqueue(Q,V)\\
+\tab\tab\tab\tab u.color = black\\
+\tab\tab\tab\tab \textbf{G.V = G.V - $\{u\}$}\\\\
+
+Question 5:\\
+\tab\tab a) 1, 2, 3, 4, 5, 6, 7\\
+\tab\tab b) 1, 2, 5, 6, 3, 7, 4\\\
+
+Question 6:\\
+\tab\tab int SumDegree(G)\\
+\tab\tab\tab int count = 0\\
+\tab\tab\tab for each node v in G.V\\
+\tab\tab\tab\tab for each node a in v.adj\\
+\tab\tab\tab\tab\tab count++\\
+\tab\tab\tab return count\\\\
+\tab Time Complexity: O(|V| + |E|)\\
+\tab Reasoning: The two for loops are iterating through all the edges in the graph. If the number of edges ($2$|E|) is smaller than the number of vertices then the time complexity is dominated by the number of vertices. If the number of edges is larger than the number of vertices then the time complexity is dominated by the number of edges.\\\\
+
+\end{document}  

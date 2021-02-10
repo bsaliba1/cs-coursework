@@ -1,0 +1,7 @@
+Name:		Baptiste Saliba
+B-Number:	B00599094
+Email:		bsaliba1@binghamton.edu
+
+Please call the program with the '--no-deprecation' flag.
+    ex. node ./index --no-deprecation ...
+

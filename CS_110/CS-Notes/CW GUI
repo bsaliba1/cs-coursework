@@ -1,0 +1,5 @@
+import tkinter
+
+class MyGUI:
+	def __init__(self):
+

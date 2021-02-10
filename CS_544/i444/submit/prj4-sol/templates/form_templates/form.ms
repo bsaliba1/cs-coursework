@@ -1,0 +1,20 @@
+<form method="GET">
+  {{>id}}
+  {{>model}}
+  {{#manufacturer}}
+    {{>manufacturer}}
+  {{/manufacturer}}
+  {{#period}}
+    {{>period}}
+  {{/period}}
+  {{#expected}}
+    {{>expected}}
+  {{/expected}}
+  {{#measure}}
+    {{>measure}}
+  {{/measure}}
+  {{#limits}}
+    {{>limits}}
+  {{/limits}}
+  {{>search_button}}
+</form>

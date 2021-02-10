@@ -1,0 +1,2 @@
+# Overview
+This is a repository for **Computer Networks (CS 428)** at **Binghamton University** taught by **Anand Seetharam**. I have included all the labs, homeworks, programming assignments, and exams that were given throughout the **Spring 2020** semester. This is all in hopes that it can help another fellow student. Please refrain from copying any of this content verbatim, this is meant to be used as a reference.

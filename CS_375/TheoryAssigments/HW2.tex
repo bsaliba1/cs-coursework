@@ -1,0 +1,169 @@
+% XeLaTeX can use any Mac OS X font. See the setromanfont command below.
+% Input to XeLaTeX is full Unicode, so Unicode characters can be typed directly into the source.
+
+% The next lines tell TeXShop to typeset with xelatex, and to open and save the source with Unicode encoding.
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{float}
+
+
+
+
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Mapping=tex-text]{Hoefler Text}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+\setmonofont[Scale=MatchLowercase]{Andale Mono}
+
+\title{CS 375 HW1}
+\author{Baptiste Saliba}
+
+\begin{document}
+\large
+\maketitle
+“I have done this assignment completely on my own. I have not copied it, nor have I given my solution to anyone else. I understand that if I am involved in plagiarism or cheating I will have to sign an official form that I have cheated and that this form will be stored in my official university record. I also understand that I will receive a grade of 0 for the involved assignment for my first offense and that I will receive a grade of “F” for the course for any additional offense.”\\
+\vspace{20mm}
+\vfill
+Question 1: \\\\
+a. \\
+\tab\tab$T(n) = 3T(n/4)+4$\\
+\tab\tab\tab $a = 3$ , $b=4$ , $f(n) = n$\\
+\tab\tab Compare:\\
+\tab\tab $n$ to $n^{log_4 3}$ //Case 3\\
+\tab\tab\tab or \\
+\tab\tab $n^{log_4 4}$ to $n^{log_4 3}$\\\\
+\tab\tab $n\in\Omega(n^{log_4 3 +(log_4 4 - log_4 3)}) , \epsilon = log_4 4 - log_4 3$\\
+\tab\tab $n\leq cn \tab  ,c = 1 ,  n_0 =1 $\\\\
+\tab\tab Regularity Condition: \\
+\tab\tab $3(n/4) \leq cn$\\
+\tab\tab $3n/4 \leq cn$ \\
+\tab\tab $3/4 \leq c<1$\\
+b. \\
+\tab\tab $T(n) = 2T(n/4)+ \sqrt n lg(n)$\\
+\tab\tab $a=2 , b=4 , f(n) = \sqrt n lg(n)$\\\\
+\tab\tab Compare:\\\\
+\tab\tab $\sqrt n lg(n)$ to $n^{log_2 (4)}$\\
+\tab\tab $n^{1/2} lg(n)$ to $n^{1/2} $ //Case 2\\\\
+\tab\tab $n^{1/2} lg(n) \in \Theta (n^{log_4 (2) lg^k (n)})$ \tab when $k\leq 0$\\
+\tab\tab $n^{1/2} lg(n) \in \Theta (n^{log_4 (2) lg^1 (n)})$ \tab when $k = 0$\\
+\tab\tab $n^{1/2} lg(n) \in \Theta (n^{log_4 (2) lg^1 (n)})$\\
+*A function bounds itself by definition so this must be true\\\\
+\tab\tab $T(n) = \Theta (n^{log_4 2} lg^2 n)$\\\\
+c.\\
+\tab\tab $T(n) = 5T(n/2) + n^2$ \tab $a = 5$ , $b =2$\\
+\tab\tab Compare: \\
+\tab\tab $n^{log_5 2}$ to $n^2$\\
+\tab\tab \tab or \\
+\tab\tab $n^{log_2 5}$ to $n^{log_2 4}$ //Case 1\\\\
+\tab\tab $n^2 \in O(n^{log_2 5 -\epsilon})$ \tab $\epsilon >0$\\
+\tab\tab $n^2 \in O(n^{log_2 5 -(log_2 5 - log_2 4)})$ \tab $\epsilon = log_2 5 - log_2 4$\\\\
+\tab\tab $n^2 \leq cn^2$ \tab , $c=1, n_0 =1$\\
+\tab\tab $ T(n) = \Theta (n^{log_2 5})$\\\\
+Question 2:\\\\
+$T(n)$ =\:\:\:\:\:$\Theta (1)$ \tab if $n\leq 1$\\
+\tab\tab $T(n/4) + T(3n/4)+ n $\tab otherwise\\
+\vspace{100mm}
+\vfill 
+\tab $T(n) \in \Omega(n log_4 n)$\\
+\tab\tab $T(n) \in O(n log_{4/3} n)$\\\\
+\tab\tab $T(n) = \Theta(n log(n))$\\
+Question 3:\\\\
+\tab\tab Use substitution to prove $T(n) = T(n-1)+n \in O(n^2)$\\\\
+\tab\tab WTS that $T(n) \leq cn^2 \tab \forall n\ge n_0$ \\
+\tab\tab Assume that $T(k) \leq ck^2$ for $k< n$ and prove $T(n) \leq cn^2$\\
+\tab\tab => $T(n) = T(n-1) + n \leq c(n-1)^2 +n = c(n^2-2n+1)+n$\\
+\tab\tab => $cn^2 - 2cn+c+n = cn^2 -n(2c-1)+c \leq cn^2 \tab n\ge 0$\\\\
+\tab\tab for $n(2c-1)+c \ge $ to hold, we need\\
+\tab\tab $2cn-n+c\ge0$ => $2cn+c \ge n$\\
+\tab\tab so we need $n\leq 2cn+c $ which can be satisfied when $c\ge {n\over2n+1}$\\
+\tab\tab for all $n\ge 1$\\
+\tab\tab $n\ge 1$ and $c\ge 1/3$\\
+\tab\tab Base Case: Suppose $T(1)=1$.Then $1 = T(1) \leq c(1)^2 = c$\\
+\tab\tab so $c\ge max(1,{1\over3}) =1$\\\\
+Question 4: Ternary Search through non-descending array\\\\
+\tab\tab a.\\
+\tab\tab Divide: Split A into 3 separate array. \\\\
+\tab\tab\tab Array 1: \:\:left1 = left\\
+\tab\tab\tab\tab\tab right1 = left+(right-left)/3\\\\
+\tab\tab\tab Array 2: \:\:left2 = right1+1\\
+\tab\tab\tab\tab\tab right2 = left2+(right-left)/3\\\\
+\tab\tab\tab Array 3: \:\:left3 = right2+1\\
+\tab\tab\tab\tab\tab right3 = right\\\\
+\tab\tab \textbf{Conquer:} Compare the right most element of each subarray.If the rightmost element of that subarray is greater than x (A[right]>x), use recursion and check that subarray. If the rightmost element is equal to x return that index, otherwise don't check that subarray.\\\\
+\tab\tab \textbf{Combine:} Combine is trivial because you are only looking for an element. Return index if found otherwise return -1.\\\\
+\tab\tab b.\\
+\tab\tab int TernarySearch(x,A,left,right)\\
+\tab\tab\tab left1 = left\\
+\tab\tab\tab right1 = left+(right-left)/3\\
+\tab\tab\tab left2 = right1+1\\
+\tab\tab\tab\ right2 = left2+(right-left)/3\\
+\tab\tab\tab left3 = right2+1\\
+\tab\tab\tab right3 = right\\
+\tab\tab\tab if(A[right1]>x)\\
+\tab\tab\tab\tab TernarySearch(x,A,left1,right1)\\
+\tab\tab\tab else if(A[right2]>x)\\
+\tab\tab\tab\tab TernarySearch(x, A,left2,right2)\\
+\tab\tab\tab else if(A[right3]>x)\\
+\tab\tab\tab\tab TernarySearch(x,A,left3,right3)\\
+\tab\tab\tab else if(A[right1]==x) return right1;\\
+\tab\tab\tab else if(A[right2]==x) return right2;\\
+\tab\tab\tab else if(A[right3]==x) return right3;\\
+\tab\tab\tab else\\
+\tab\tab\tab\tab return -1;\\\\
+\tab\tab c.\\
+\tab\tab $T(n) = \:\:\:\Theta(1)$ when  $n=1$\\
+\tab\tab\tab\tab $3T(n/3)+\Theta(1)$ , otherwise\\\\
+\tab\tab d.\\
+\tab\tab $T(n) = T(n/3) +c$\\
+\tab\tab\tab $a=1 , b=3, f(n)=c$\\\\
+\tab\tab Compare: $n^{log_3(1)}$ to $1$ //Case 2\\\\
+\tab\tab $f(n) \in \Theta (n^{log_b(a)} log^k(n)), k\ge0$\\
+\tab\tab $f(n) \in \Theta (n^{log_3(1)} log^0(n)), k=0$\\
+\tab\tab $n^{log_3 1} = 1 \in \Theta (n^{log_3(1)} log^0(n))$\\
+\tab\tab $1 \in \Theta(1)$\\\\
+\tab\tab $\Theta (n^{log_b}log^{k+1}(n) = \Theta(n^{log_3 1} log^1(n))$\\
+\tab\tab $T(n) = \Theta(log(n))$\\\\
+Question 5:\\
+\tab\tab a.\\
+\tab\tab \textbf{Divide:} Pick a random pivot in your list and divide your list into 2 sublists. One being all elements less than or equal to your pivot and the other being all elements greater than your pivot.\\
+\tab\tab \textbf{Conquer:} If the size of the "lesser" list is greater than or equal to k recursively call function selection on that list. Otherwise call function selection on the "greater" list with parameters (k-lesser.length, S). Base case: Once the size of lesser is equal to 1 return the value in lesser.\\
+\tab\tab \textbf{Combine:} Combine is trivial because we are searching for an element.\\\\
+\tab\tab b.\\
+\tab\tab int Selection(k,S)\\
+\tab\tab\tab int pivot = S[rand(0,S.length-1)]\\
+\tab\tab\tab list lesser\\
+\tab\tab\tab list greater\\
+\tab\tab\tab for(i=0;i<S.length;i++)\\
+\tab\tab\tab\tab if(S[i] $\leq$ pivot) \\
+\tab\tab\tab\tab\tab lesser.pushback(S[i])\\
+\tab\tab\tab\tab else\\
+\tab\tab\tab\tab\tab greater.pushback(S[i])\\
+\tab\tab\tab if(lesser.length ==1) return lesser[0]\\
+\tab\tab\tab else if(lesser.length $\ge$ k)\\
+\tab\tab\tab\tab return selection(k, lesser)\\
+\tab\tab\tab else\\
+\tab\tab\tab \tab return selection(k-lesser.length, greater)\\\\
+\tab\tab c.\\
+\tab\tab \textbf{Worst case:} You pick the largest element in the list and only remove one element at a time until you get to k. This is highly unlikely but could happen and would result in $T(n) = \Theta(n^2)$\\
+\tab\tab \textbf{Best case:} When you pick your random pivot, this pivot splits the list in half every time.\\\\
+Question 6:\\
+\vspace{100mm}
+\vfill 
+$$\sum_{i=0}^{lg(n)} {n\over lg({n\over2^i})} = n\sum_{i=0}^{lg(n)} {1\over lg({n})-lg_2(2^i)} = n\sum_{i=0}^{lg(n)} {1\over lg({n})-i}= n\sum_{i=0}^{lg(n)} ({lg({n})-i})^{-1}$$\\
+\tab\tab Harmonic Series\\
+\tab\tab def: $$\sum_{i=1}^{k}{1\over n} >  \int_{1}^{k+1} {1\over x} dx = ln(k+1)$$\\
+\tab\tab  $ln(lg(n)-1+1) = ln(lg(n))*n$\\\\
+\tab\tab $T(n) = \Theta(n ln(lg(n)))$\\
+\end{document}  

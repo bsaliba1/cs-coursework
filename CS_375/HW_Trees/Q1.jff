@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 6.4.--><structure>
+	<type>fa</type>
+	<automaton>
+		<!--The list of states.-->
+		<state id="0" name="0,20">
+			<x>637.0</x>
+			<y>69.0</y>
+		</state>
+		<state id="1" name="3,20">
+			<x>521.0</x>
+			<y>156.0</y>
+		</state>
+		<state id="2" name="0,17">
+			<x>767.0</x>
+			<y>140.0</y>
+		</state>
+		<state id="3" name="7,20">
+			<x>427.0</x>
+			<y>244.0</y>
+		</state>
+		<state id="4" name="3,16">
+			<x>589.0</x>
+			<y>245.0</y>
+		</state>
+		<state id="5" name="12,20">
+			<x>366.0</x>
+			<y>355.0</y>
+		</state>
+		<state id="6" name="7,15">
+			<x>470.0</x>
+			<y>354.0</y>
+		</state>
+		<state id="7" name="8,16">
+			<x>552.0</x>
+			<y>348.0</y>
+		</state>
+		<state id="8" name="3,11">
+			<x>635.0</x>
+			<y>348.0</y>
+		</state>
+		<state id="9" name="4,17">
+			<x>749.0</x>
+			<y>240.0</y>
+		</state>
+		<state id="10" name="0,13">
+			<x>879.0</x>
+			<y>231.0</y>
+		</state>
+		<state id="11" name="9,17">
+			<x>721.0</x>
+			<y>355.0</y>
+		</state>
+		<state id="12" name="4,12">
+			<x>813.0</x>
+			<y>352.0</y>
+		</state>
+		<state id="13" name="5,13">
+			<x>892.0</x>
+			<y>349.0</y>
+		</state>
+		<state id="14" name="0,8">
+			<x>980.0</x>
+			<y>348.0</y>
+		</state>
+		<state id="15" name="13,13">
+			<x>849.0</x>
+			<y>457.0</y>
+		</state>
+		<state id="16" name="5,5">
+			<x>945.0</x>
+			<y>454.0</y>
+		</state>
+		<!--The list of transitions.-->
+		<transition>
+			<from>4</from>
+			<to>8</to>
+			<read>Don't</read>
+		</transition>
+		<transition>
+			<from>9</from>
+			<to>12</to>
+			<read>Don't</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>4</to>
+			<read>Don't</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>3</to>
+			<read>Include</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>10</to>
+			<read>Don't</read>
+		</transition>
+		<transition>
+			<from>10</from>
+			<to>13</to>
+			<read>Include</read>
+		</transition>
+		<transition>
+			<from>13</from>
+			<to>15</to>
+			<read>Include</read>
+		</transition>
+		<transition>
+			<from>10</from>
+			<to>14</to>
+			<read>Don't</read>
+		</transition>
+		<transition>
+			<from>13</from>
+			<to>16</to>
+			<read>Don't</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>6</to>
+			<read>Don't</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>2</to>
+			<read>Don't</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>7</to>
+			<read>Include</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>9</to>
+			<read>Include</read>
+		</transition>
+		<transition>
+			<from>9</from>
+			<to>11</to>
+			<read>Include</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>5</to>
+			<read>Include</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>Include</read>
+		</transition>
+	</automaton>
+</structure>

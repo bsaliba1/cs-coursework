@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bsaliba1/Documents/CS/CS_540/map-container-bsaliba1/Map.hpp
+stdio.h
+-
+stdlib.h
+-
+iostream
+-
+vector
+-
+
+/Users/bsaliba1/Documents/CS/CS_540/map-container-bsaliba1/minimal.cpp
+Map.hpp
+/Users/bsaliba1/Documents/CS/CS_540/map-container-bsaliba1/Map.hpp
+cassert
+-
+

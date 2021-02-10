@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bsaliba1/Documents/CS/CS_428/programming_assignment3/main.cpp
+iostream
+-
+vector
+-
+set
+-
+map
+-
+iomanip
+-
+

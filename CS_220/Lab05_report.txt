@@ -1,0 +1,34 @@
+CS-220 Spring 2018	Lab-05			Due Feb 20, 2018
+
+1. Is arr2d in row major order? How can you show in C code whether
+   arr2d is in row major order or not?
+
+-Yes arr2d is in row major order. You could find out if it is in row major order by 
+printing out the address of each element, column by column, in arr2d and seeing if each is hex 4 bigger than the last.This requires nested for loops and obtaining the address of each element(&arr2d[row][col]).
+   
+2. Can the values of arrPtrs1d be treated abstractly as if it was
+   a normal two dimensional array? Can you use square bracket 
+   notation to read or write arrPtrs1d? How can you show in C
+   code whether arrPtrs1d can be treated as a 2D array of floats?	
+	
+- Yes you can treat arrPtrs1d as a normal two dimensional array. In fact if you use nested for loops, one to span the columns and another for the rows, you can print out every element of arrPtrs1d (printf("%f\n",arrPtrs1d[row][col])). This will print out the floating point value of each element in arrPtrs1d.
+   
+3. Is arrPtrs1d in row major order?  How can you show in C code whether
+   arrPtrs1d is in row major order or not? 
+   
+- No arrPtrs1d is not in row major order. You can check whether they are in row major order by using the nested for loop to print out the addresses of each element and making sure they are always hex 4 greater (printf("%p\n", &arrPtrs1d[row][col])). When you do that for the elements of arrPtrs1d it is clear that the elements are not in order of their memory address.
+
+4. Can the values of arrPtrsPtrs1d be treated abstractly as if it  
+   was a two dimensional array of pointers to floating point numbers?
+   Can you use square bracket notation to read those pointers? How
+   can you show in C code that arrPtrsPtrs1d can be treated as a 
+   2D array of pointers?
+
+- Yes you can use arrPtrsPtrs1d as a two dimensional array of pointers to floating point numbers. This requires showing that each element in arrPtrsPtrs1d is a pointer to another array. This means you have to specify '*' before using arrPtrsPtrs1d as an array. You can read the values of arrPtrsPtrs1d by going through the nested for loop and printing out each element by using printf("%f\n",*arrPtrsPtrs[row][col])).
+   
+5. From an abstract point of view, is there a difference between arr2d
+   and arrPtrs1d? From a concrete point of view (i.e. how the array is
+   laid out in memory), is there a difference between arr2d and
+   arrPtrs1d? When might the abstraction "leak"?
+
+- From an abstracted point of view, there is no difference between arrPtrs1d and arr2d because they can both be treated as a 2d array. However, in terms of efficiency arr2d is much quicker because it is quickest the elements are in row major form. When in row major order the programming runs into less page faults.

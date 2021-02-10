@@ -1,0 +1,14 @@
+Baptiste Saliba
+Assignment 1
+WireShark Tutorial
+
+1. 
+    TCP, ARP, UDP
+2. 
+    The get was received at time Jan 28, 2020 22:27:38.327245000 EST and the OK was sent at Jan 28, 2020 22:27:38.363434000 EST making it a time elapsed of 0.36s.
+    You can also see the time elapsed in the [Time since request: 0.036189000 seconds] section
+3. 
+    My_PC: 10.201.14.196
+    www-net.cs.umass.edu: 128.119.245.12
+4.
+    Print can be found in file 'wireshark_lab1_packets.pdf'

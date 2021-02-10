@@ -1,0 +1,1 @@
+<label>&nbsp;</label><input type="submit" value="search">

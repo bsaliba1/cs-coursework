@@ -1,0 +1,27 @@
+CS-220 Spring 2018	Lab-03			Due Feb 06, 2018
+
+1. The acronym "GDB" normally stands for "Gnu DeBugger", but according to the
+   hunt the Wumpus Emperor, what does the acronym "GDB" stand for?
+- Grandiose Destroyer of Bulldroppings
+   
+2. During this lab, what was the most useful gdb sub-command you discovered?
+	
+-The checkpoint command was extremely helpful for restoring/restarting to previous checkpoint before you die.
+
+
+3. Is it possible to use gdb to prevent the message "You're dead." from getting
+   printed, but instead of printing the message, cause the program to get
+   restarted from the beginning automatically?  If so, what gdb sub-commands 
+   did you use to make this happen?
+   
+-You can use a checkpoint before the break killPlayer and restore to that checkpoint as a command for break killPlayer and this will restore back to before you died and avoid the "You're dead" string.
+
+4. The wumpus moves around the maze randomly, and kills a player if it ends up
+   in the same room as the player. Is there any way in gdb to move the wumpus
+   to a different room before he has a chance to kill you? If so, what gdb
+   sub-commands would you use to move the wumpus?
+-You can change the wumpus' location by setting the wumpusCol and wumpusRow right before you move
+   
+5. Do you have any suggestions to make the wumpus game more fun or more
+   interesting?
+-Making the map bigger and having a GUI map on the side would make it a lot of fun

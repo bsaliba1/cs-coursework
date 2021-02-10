@@ -1,0 +1,24 @@
+Name:		Baptiste Saliba
+B-Number:	B00599094
+Email:		bsaliba1@binghamton.edu
+
+Information for Grading:
+    
+    Path to data:
+    $ DATA=~/cs544/data
+    
+    Command to load data: 
+    $ node ./index.js 2345 mongodb://localhost:27017/sensors $DATA/sensor-types.json $DATA/sensors.json $DATA/sensor-data.json & echo $! > .pid
+
+NOTES (Ignore this):
+        
+    Command to kill process:
+    $ kill `cat .pid`
+
+    Command to get root:
+    $ curl --request GET http://localhost:2345/
+
+    Obtain IP Address:
+    $ ifconfig 
+        OR
+    $ curl ifconfig.me

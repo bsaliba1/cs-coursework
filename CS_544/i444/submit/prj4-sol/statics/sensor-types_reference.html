@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Search Sensor Types</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="page">
+    <h1 class="tst-sensor-types-search-page">Search Sensor Types</h1>
+    <form method="GET">
+      <label for="id">
+        Sensor Type ID
+      </label>
+      <div>
+        <input name="id" type="text" value="" id="id" class="tst-sensor-type-id">
+
+      </div>
+      <label for="modelNumber">
+        Model Number
+      </label>
+      <div>
+        <input name="modelNumber" type="text" value="" id="modelNumber" class="tst-model-number">
+
+      </div>
+      <label for="manufacturer">
+        Manufacturer
+      </label>
+      <div>
+        <input name="manufacturer" type="text" value="" id="manufacturer" class="tst-manufacturer">
+
+      </div>
+      <label for="quantity">
+        Measure
+      </label>
+      <div>
+        <select name="quantity" id="quantity" class="tst-quantity">
+          <option value="" selected>
+            Select
+          </option>
+          <option value="temperature">
+            Temperature
+          </option>
+          <option value="pressure">
+            Pressure
+          </option>
+          <option value="flow">
+            Flow Rate
+          </option>
+          <option value="humidity">
+            Relative Humidity
+          </option>
+        </select>
+
+      </div>
+      <label>&nbsp;</label><input type="submit" value="search">
+    </form>
+  </div>
+  <h2>Results Summary</h2>
+
+  <table class="summary">
+    <thead>
+      <tr>
+        <th>Manufacturer</th>
+        <th>Sensor Type ID</th>
+        <th>Model Number</th>
+        <th>Measure</th>
+        <th colspan="2">Limits</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>Min</th>
+        <th>Max</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tst-manufacturer">
+          ert
+        </td>
+        <td class="tst-sensor-type-id">
+          234
+        </td>
+        <td class="tst-model-number">
+          H47A
+        </td>
+        <td class="tst-quantity">
+          flow
+        </td>
+        <td class="numeric interval tst-limits-min">
+          33
+        </td>
+        <td class="numeric interval tst-limits-max">
+          77
+        </td>
+      </tr>
+      <tr>
+        <td class="tst-manufacturer">
+          77
+        </td>
+        <td class="tst-sensor-type-id">
+          777
+        </td>
+        <td class="tst-model-number">
+          H47A
+        </td>
+        <td class="tst-quantity">
+          flow
+        </td>
+        <td class="numeric interval tst-limits-min">
+          4
+        </td>
+        <td class="numeric interval tst-limits-max">
+          5
+        </td>
+      </tr>
+      <tr>
+        <td class="tst-manufacturer">
+          binghamton
+        </td>
+        <td class="tst-sensor-type-id">
+          ge-f26x
+        </td>
+        <td class="tst-model-number">
+          b00123
+        </td>
+        <td class="tst-quantity">
+          flow
+        </td>
+        <td class="numeric interval tst-limits-min">
+          0
+        </td>
+        <td class="numeric interval tst-limits-max">
+          575
+        </td>
+      </tr>
+      <tr>
+        <td class="tst-manufacturer">
+          General Electric
+        </td>
+        <td class="tst-sensor-type-id">
+          ge-h47a
+        </td>
+        <td class="tst-model-number">
+          H47A
+        </td>
+        <td class="tst-quantity">
+          humidity
+        </td>
+        <td class="numeric interval tst-limits-min">
+          0
+        </td>
+        <td class="numeric interval tst-limits-max">
+          120
+        </td>
+      </tr>
+      <tr>
+        <td class="tst-manufacturer">
+          General Electric
+        </td>
+        <td class="tst-sensor-type-id">
+          ge-p92b
+        </td>
+        <td class="tst-model-number">
+          P92B
+        </td>
+        <td class="tst-quantity">
+          pressure
+        </td>
+        <td class="numeric interval tst-limits-min">
+          10
+        </td>
+        <td class="numeric interval tst-limits-max">
+          200
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="scroll">
+    <a class="tst-next" href="?_index&#x3D;5" rel="next">&gt;&gt;</a>
+  </div>
+
+  <footer>
+    <ul>
+      <li><a class="tst-home" href="/">Home</a>.</li>
+      <li>
+        <a class="tst-sensor-types-search" href="/sensor-types.html">
+          Search Sensor Types
+        </a>.
+      </li>
+      <li>
+        <a class="tst-sensor-types-add" href="/sensor-types/add.html">
+          Add Sensor Type
+        </a>.
+      </li>
+      <li>
+        <a class="tst-sensors-search" href="/sensors.html">
+          Search Sensor
+        </a>.
+      </li>
+      <li>
+        <a class="tst-sensors-add" href="/sensors/add.html">
+          Add Sensor
+        </a>.
+      </li>
+    </ul>
+  </footer>
+</body>
+
+</html>

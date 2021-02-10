@@ -1,0 +1,497 @@
+Last login: Mon Sep 25 09:53:55 on console
+Baptistes-MacBook-Air:~ bsaliba1$ cd Documents
+Baptistes-MacBook-Air:Documents bsaliba1$ cd CS-140
+-bash: cd: CS-140: No such file or directory
+Baptistes-MacBook-Air:Documents bsaliba1$ cd CS_140
+Baptistes-MacBook-Air:CS_140 bsaliba1$ cd assignment03
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.CalenderTester
+null
+null
+null
+null
+Exception in thread "main" java.lang.NullPointerException
+	at java.time.chrono.ChronoLocalDateTime.isAfter(ChronoLocalDateTime.java:526)
+	at java.time.LocalDateTime.isAfter(LocalDateTime.java:1860)
+	at assignment03.CalenderItem.setStart(CalenderItem.java:18)
+	at assignment03.CalenderList.insertItem(CalenderList.java:56)
+	at assignment03.CalenderTester.main(CalenderTester.java:22)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.CalenderTester
+null
+Exception in thread "main" java.lang.IllegalArgumentException: the start cannot be after end
+	at assignment03.CalenderItem.setStart(CalenderItem.java:19)
+	at assignment03.CalenderTester.main(CalenderTester.java:17)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.CalenderTester
+null
+null
+null
+null
+Exception in thread "main" java.lang.NullPointerException
+	at java.time.chrono.ChronoLocalDateTime.isAfter(ChronoLocalDateTime.java:526)
+	at java.time.LocalDateTime.isAfter(LocalDateTime.java:1860)
+	at assignment03.CalenderItem.setStart(CalenderItem.java:18)
+	at assignment03.CalenderList.insertItem(CalenderList.java:56)
+	at assignment03.CalenderTester.main(CalenderTester.java:23)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+NodeList.java:47: error: cannot find symbol
+		sieve(object.first);
+		      ^
+  symbol:   variable object
+  location: class NodeList
+1 error
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+NodeList.java:47: error: cannot find symbol
+		list.sieve(object.first);
+		           ^
+  symbol:   variable object
+  location: class NodeList
+1 error
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+Error: Main method is not static in class assignment03.NodeList, please define the main method as:
+   public static void main(String[] args)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+NodeList.java:46: error: non-static method makeList(int) cannot be referenced from a static context
+		makeList(20);
+		^
+NodeList.java:47: error: non-static method sieve(Node) cannot be referenced from a static context
+		sieve(list.first);
+		^
+2 errors
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:36)
+	at assignment03.NodeList.main(NodeList.java:47)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:36)
+	at assignment03.NodeList.main(NodeList.java:47)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+NodeList.java:46: error: 'void' type not allowed here
+		System.out.println(list.makeList(20));
+		                                ^
+1 error
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+assignment03.NodeList@677327b6
+Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:36)
+	at assignment03.NodeList.main(NodeList.java:48)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+NodeList.java:47: error: ')' expected
+		System.out.println(toString(list);
+		                                 ^
+1 error
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+NodeList.java:47: error: method toString in class Object cannot be applied to given types;
+		System.out.println(toString(list));
+		                   ^
+  required: no arguments
+  found: NodeList
+  reason: actual and formal argument lists differ in length
+1 error
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+assignment03.NodeList@677327b6
+Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:36)
+	at assignment03.NodeList.main(NodeList.java:48)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:36)
+	at assignment03.NodeList.main(NodeList.java:48)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:36)
+	at assignment03.NodeList.main(NodeList.java:48)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:36)
+	at assignment03.NodeList.main(NodeList.java:48)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:36)
+	at assignment03.NodeList.sieve(NodeList.java:41)
+	at assignment03.NodeList.main(NodeList.java:48)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:36)
+	at assignment03.NodeList.sieve(NodeList.java:41)
+	at assignment03.NodeList.main(NodeList.java:48)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:37)
+	at assignment03.NodeList.main(NodeList.java:49)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:36)
+	at assignment03.NodeList.sieve(NodeList.java:41)
+	at assignment03.NodeList.main(NodeList.java:48)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:36)
+	at assignment03.NodeList.sieve(NodeList.java:41)
+	at assignment03.NodeList.main(NodeList.java:50)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:36)
+	at assignment03.NodeList.sieve(NodeList.java:41)
+	at assignment03.NodeList.main(NodeList.java:48)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:36)
+	at assignment03.NodeList.main(NodeList.java:48)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,202,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:34)
+	at assignment03.NodeList.main(NodeList.java:48)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:37)
+	at assignment03.NodeList.main(NodeList.java:48)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:36)
+	at assignment03.NodeList.sieve(NodeList.java:41)
+	at assignment03.NodeList.main(NodeList.java:48)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20^[[B^[[A
+^[q
+qqq
+
+
+cccC
+c
+
+cs
+^CBaptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20saas
+^CBaptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20^[[Aasd^CBaptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:36)
+	at assignment03.NodeList.main(NodeList.java:48)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:36)
+	at assignment03.NodeList.main(NodeList.java:48)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20jajnfknjajnfknjajnfknjajnfknjajnfknjajnfknjajnfknjajnfknjajnfknjajnfknjajnfknjajnfknjajnfknjajnfknjajnfknjajnfknjajnfknjajnfknjajnfknjajnfknjajnfknjajnfknjajnfkn
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20jajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjaj
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20jajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjaj
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20jajjajjajjajjajjajjajjajjajException in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:38)
+	at assignment03.NodeList.main(NodeList.java:49)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+^[[ANodeList.java:38: error: ')' expected
+				temp.setNext(temp.getNext();
+				                           ^
+1 error
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20jajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjajjaj
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+NodeList.java:34: error: ';' expected
+		int i = 1
+		         ^
+1 error
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20123456789123451234123121111
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,201
+2
+3
+4
+5
+6
+7
+8
+9
+1
+2
+3
+4
+5
+1
+2
+3
+4
+1
+2
+3
+1
+2
+1
+1
+1
+1
+
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ 
+  [Restored Sep 27, 2017, 12:25:17 AM]
+Last login: Tue Sep 26 10:57:43 on ttys000
+Restored session: Wed Sep 27 00:25:10 EDT 2017
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20^CBaptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+2
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+NodeList.java:38: error: cannot find symbol
+				System.out.println(x);
+				                   ^
+  symbol:   variable x
+  location: class NodeList
+1 error
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+
+2
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+2
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+x
+x
+x
+x
+x
+x
+x
+x
+x
+Exception in thread "main" java.lang.NullPointerException
+	at assignment03.NodeList.sieve(NodeList.java:37)
+	at assignment03.NodeList.main(NodeList.java:52)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+2
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+NodeList.java:36: error: incompatible types: void cannot be converted to Node
+			temp = temp.setNext(temp.getNext());
+			                   ^
+1 error
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+2,3,5,7,11,13,17,19
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.NodeList
+2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
+2,3,5,7,11,13,17,19
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.CalenderTest
+Error: Could not find or load main class assignment03.CalenderTest
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.CalenderTester
+null
+null
+null
+null
+Exception in thread "main" java.lang.NullPointerException
+	at java.time.chrono.ChronoLocalDateTime.isAfter(ChronoLocalDateTime.java:526)
+	at java.time.LocalDateTime.isAfter(LocalDateTime.java:1860)
+	at assignment03.CalenderItem.setStart(CalenderItem.java:18)
+	at assignment03.CalenderList.insertItem(CalenderList.java:56)
+	at assignment03.CalenderTester.main(CalenderTester.java:22)
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+CalenderList.java:61: error: cannot find symbol
+		if(newItem.endsBefore(nowItem)){
+		                      ^
+  symbol:   variable nowItem
+  location: class CalenderList
+CalenderList.java:64: error: cannot find symbol
+		if (nowItem.startsAfter(newItem)){
+		    ^
+  symbol:   variable nowItem
+  location: class CalenderList
+2 errors
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.CalenderTester
+null
+null
+null
+null
+null
+Baptistes-MacBook-Air:assignment03 bsaliba1$ javac -d . *.java
+Baptistes-MacBook-Air:assignment03 bsaliba1$ java -cp . assignment03.CalenderTester
+null
+null
+null
+null
+null
+null
+Baptistes-MacBook-Air:assignment03 bsaliba1$ 
